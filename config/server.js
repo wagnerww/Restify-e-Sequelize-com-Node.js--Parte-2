@@ -8,29 +8,4 @@ server.use(restify.plugins.bodyParser({
     overrideParams: false
 }));
 
-server.get('/contatos', (request, response, next) => {
-    ///Enum, do tipo: 1=email | 2=telefone
-    const Contatos = [
-        {
-            id:1,
-            Nome:'Wagner Ricardo',
-            Contatos:[
-                {
-                    tipo:1,
-                    contato:'wagnerricardonet@gmail.com'
-                },
-                {
-                    tipo:2,
-                    contato:'123456789123'
-                }
-            ]
-        }];
-    response.send(200, Contatos);
-    next();
-});
-
-server.listen(port, () => {
-    console.log(`restify executando na porta:${port}`);
-});
-
-module.exports = server;
+module.exports = {server, port};
