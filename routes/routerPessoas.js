@@ -10,8 +10,5 @@ router.get('/pessoas', (request, response, next) => {
     next();
 });
 
-router.post('/pessoa', (request, response, next) => {
-    
-});
 
 module.exports = router;
